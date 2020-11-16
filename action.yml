@@ -1,0 +1,14 @@
+name: Sonar Cloud
+runs:
+  using: docker
+  image: Dockerfile
+inputs:
+  buildWrapperOutputDir:
+    description: The output directory of the build wrapper
+    required: true
+  buildCommand:
+    description: The project build command
+    required: true
+  args:
+    description: Additional arguments to the sonarcloud scanner
+    required: false
